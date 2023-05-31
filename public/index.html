@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cek Ongkir</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Cek Ongkir Arseno </h1>
+  <form>
+    <div>
+      <label for="origin">Kota Asal:</label>
+      <div class="suggestion-container">
+        <input type="text" id="origin" name="origin" autocomplete="off">
+        <ul id="origin-suggestions" class="suggestion-list"></ul>
+      </div>
+    </div>
+    <div>
+      <label for="destination">Kota Tujuan:</label>
+      <div class="suggestion-container">
+        <input type="text" id="destination" name="destination" autocomplete="off">
+        <ul id="destination-suggestions" class="suggestion-list"></ul>
+      </div>
+    </div>
+    <div>
+      <label for="weight">Berat Barang (gram):</label>
+      <input type="number" id="weight" name="weight">
+    </div>
+    <div>
+      <label for="courier">Kurir:</label>
+      <select id="courier" name="courier">
+        <option value="">Pilih Kurir</option>
+        <option value="jne">JNE</option>
+        <option value="tiki">TIKI</option>
+        <option value="pos">POS Indonesia</option>
+      </select>
+    </div>
+    <button type="button" onclick="cekOngkir()">Cek Ongkir</button>
+  </form>
+
+  <div id="loading" style="display: none;">Loading.....</div>
+  <div id="result">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
